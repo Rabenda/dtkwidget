@@ -17,7 +17,7 @@ SOURCES += \
     $$PWD/dwidgetutil.cpp \
     $$PWD/dhidpihelper.cpp
 
-linux* {
+linux|freebsd {
 CONFIG += link_pkgconfig
 PKGCONFIG += gsettings-qt librsvg-2.0 dframeworkdbus
 

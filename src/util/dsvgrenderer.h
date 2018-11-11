@@ -28,7 +28,7 @@ QT_BEGIN_NAMESPACE
 class QPainter;
 QT_END_NAMESPACE
 
-#ifdef Q_OS_LINUX
+#if defined (Q_OS_LINUX) || defined(Q_OS_FREEBSD)
 DWIDGET_BEGIN_NAMESPACE
 class DSvgRendererPrivate;
 class DSvgRenderer : public QObject, public DTK_CORE_NAMESPACE::DObject

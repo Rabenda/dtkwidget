@@ -28,7 +28,7 @@ class DDesktopServices
 {
 public:
 
-#ifdef Q_OS_LINUX
+#if defined (Q_OS_LINUX) || defined (Q_OS_FREEBSD)
     enum SystemSoundEffect {
         SSE_Notifications,
         SSE_Screenshot,
@@ -57,7 +57,7 @@ public:
     static bool trash(QUrl urlstartupId);
     static bool trash(const QList<QUrl> urls);
 
-#ifdef Q_OS_LINUX
+#if defined (Q_OS_LINUX) || defined (Q_OS_FREEBSD)
     static bool playSystemSoundEffect(const SystemSoundEffect &effect);
     static bool playSystemSoundEffect(const QString &name);
 #endif
